@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>健康生活指南</title>
+    <!-- 載入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 載入 Lucide Icons 以獲取美觀的圖標 -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* 設定主要字體為 Inter */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+        }
+        /* 定義主容器背景漸層 */
+        .hero-bg {
+            background-image: linear-gradient(135deg, #a8c0ff 0%, #373b44 100%);
+        }
+        /* 自定義卡片效果 */
+        .health-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .health-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 標題與導航 -->
+    <header class="hero-bg text-white py-12 md:py-20 shadow-xl">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
+                擁抱健康，活出精彩
+            </h1>
+            <p class="text-lg md:text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+                從今天開始，掌握飲食、運動、壓力管理與作息時間，為自己打造更美好的生活。
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-medium">
+                <a href="#diet" class="bg-white text-[#373b44] hover:bg-gray-100 py-2 px-6 rounded-full transition duration-300 shadow-md">
+                    健康飲食
+                </a>
+                <a href="#exercise" class="bg-white text-[#373b44] hover:bg-gray-100 py-2 px-6 rounded-full transition duration-300 shadow-md">
+                    規律運動
+                </a>
+                <a href="#stress" class="bg-white text-[#373b44] hover:bg-gray-100 py-2 px-6 rounded-full transition duration-300 shadow-md">
+                    壓力釋放
+                </a>
+                <a href="#sleep" class="bg-white text-[#373b44] hover:bg-gray-100 py-2 px-6 rounded-full transition duration-300 shadow-md">
+                    優質睡眠
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主內容區塊 - 四大支柱 -->
+    <main class="py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
+                健康生活的四大支柱
+            </h2>
+
+            <!-- 卡片網格佈局，確保響應式設計 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- 1. 飲食 (Diet) -->
+                <section id="diet" class="health-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-green-500">
+                    <div class="text-green-500 mb-4">
+                        <i data-lucide="carrot" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">健康飲食</h3>
+                    <p class="text-gray-600 mb-4">
+                        身體的燃料來自於您的食物選擇。均衡的營養是保持活力和預防疾病的基礎。
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2 font-bold">•</span>
+                            多攝取蔬果與全穀物，確保足夠的膳食纖維。
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2 font-bold">•</span>
+                            限制加工食品、高糖飲料及過多的飽和脂肪攝取。
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2 font-bold">•</span>
+                            保持水分充足，每天飲用足夠的清水。
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- 2. 運動 (Exercise) -->
+                <section id="exercise" class="health-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-red-500">
+                    <div class="text-red-500 mb-4">
+                        <i data-lucide="dumbbell" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">規律運動</h3>
+                    <p class="text-gray-600 mb-4">
+                        運動能強化心臟、增強肌肉，並有效改善情緒，是提升生活品質的關鍵。
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-red-500 mr-2 font-bold">•</span>
+                            每週累積至少150分鐘中等強度有氧運動 (例如快走)。
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-red-500 mr-2 font-bold">•</span>
+                            每週進行兩次或以上的阻力訓練，以鍛鍊主要肌群。
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-red-500 mr-2 font-bold">•</span>
+                            避免長時間靜坐，每隔一小時起身活動5分鐘。
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- 3. 壓力管理 (Stress Management) -->
+                <section id="stress" class="health-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-yellow-500">
+                    <div class="text-yellow-500 mb-4">
+                        <i data-lucide="leaf" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">壓力釋放</h3>
+                    <p class="text-gray-600 mb-4">
+                        長期壓力對身心健康有害。學習有效的減壓技巧，能讓您保持內心平靜。
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-yellow-500 mr-2 font-bold">•</span>
+                            練習正念冥想或深呼吸，每天抽出時間放空思緒。
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-yellow-500 mr-2 font-bold">•</span>
+                            與親友保持聯繫，社交支持是緩解壓力的重要來源。
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-yellow-500 mr-2 font-bold">•</span>
+                            從事自己熱愛的愛好，讓大腦有休息和切換的機會。
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- 4. 作息時間 (Sleep Schedule) -->
+                <section id="sleep" class="health-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-indigo-500">
+                    <div class="text-indigo-500 mb-4">
+                        <i data-lucide="moon" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-800">優質睡眠</h3>
+                    <p class="text-gray-600 mb-4">
+                        睡眠是身體修復和記憶鞏固的黃金時間。優質的睡眠是高效率生活的基礎。
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-indigo-500 mr-2 font-bold">•</span>
+                            成人每晚應確保7至9小時的睡眠時間。
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-indigo-500 mr-2 font-bold">•</span>
+                            建立規律的作息時間，即使在週末也應盡量保持一致。
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-indigo-500 mr-2 font-bold">•</span>
+                            睡前一小時避免藍光（手機、電腦），營造黑暗、安靜的睡眠環境。
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- 呼籲行動與結尾 -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-4 text-center">
+            <h4 class="text-2xl font-semibold mb-4">今天就開始您的健康之旅</h4>
+            <p class="mb-6 opacity-80 max-w-xl mx-auto">
+                健康不是一個目的地，而是一種生活方式的選擇。從小處著手，持之以恆，您會看到巨大的改變！
+            </p>
+            <a href="#diet" class="inline-block bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 shadow-xl">
+                立即行動
+            </a>
+            <p class="mt-8 text-sm opacity-60">
+                &copy; 2025 健康生活指南. 版權所有。
+            </p>
+        </div>
+    </footer>
+
+    <!-- 初始化 Lucide Icons，將 data-lucide 屬性轉換為 SVG -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
